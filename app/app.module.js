@@ -18,6 +18,7 @@ var main_component_1 = require('./main.component');
 var contacts_component_1 = require('./contacts.component');
 var job_details_component_1 = require('./job-details.component');
 var header_component_1 = require('./header.component');
+// import $ from 'jquery';
 var AppModule = (function () {
     function AppModule() {
     }

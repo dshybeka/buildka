@@ -10,6 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+// import $ = require('jquery');
+// import { $ } from "jquery";
 var JOB_ID_TO_IMG_COUNTER = {
     1: { id: 1, name: "",
         details: "<h2>\u0417\u0430\u0431\u043E\u0440\u044B</h2><p>\u0423 \u043D\u0430\u0441 \u0441\u0430\u043C\u044B\u0435 \u043B\u0443\u0447\u0448\u0438\u0435 \u0437\u0430\u0431\u043E\u0440\u044B, \u0431\u043B\u0430 \u0431\u043B\u0430 \u0431\u043B\u0430.</p>",
@@ -58,6 +60,11 @@ var JobDetailsComponent = (function () {
             var id = Number.parseInt(params['id']);
             _this.jobDetail = JOB_ID_TO_IMG_COUNTER[id];
         });
+    };
+    JobDetailsComponent.prototype.handleImageClick = function (event) {
+        console.log("called handleImageClick ", event);
+        event.preventDefault();
+        $('#pikapika').ekkoLightbox();
     };
     JobDetailsComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();

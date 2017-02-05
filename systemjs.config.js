@@ -26,8 +26,9 @@
       // other libraries
       'rxjs':                       'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api',
-      'ng2-scrollspy': 'npm:ng2-scrollspy'
-
+      'ng2-scrollspy': 'npm:ng2-scrollspy',
+      'ekko-lightbox': 'npm:ekko-lightbox',
+      'jquery': 'npm:jquery'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -45,7 +46,17 @@
       'ng2-scrollspy': {
         main: './dist/index.js',
         defaultExtension: "js"
+      },
+
+      'jquery': {
+        main: './dist/index.js',
+        defaultExtension: "js"
+      },
+      'ekko-lightbox': {
+        main: './dist/index.js',
+        defaultExtension: "js"
       }
+
     }
   });
 })(this);

@@ -14,6 +14,8 @@ import { ContactsComponent }  from './contacts.component';
 import { JobDetailsComponent }  from './job-details.component';
 import { HeaderComponent }  from './header.component';
 
+// import $ from 'jquery';
+
 @NgModule({
   imports: [ BrowserModule, ScrollSpyModule.forRoot(), routing, MainRoutingModule ],
   declarations: [ AppComponent, ContactsComponent, MainComponent, JobDetailsComponent, HeaderComponent ],
