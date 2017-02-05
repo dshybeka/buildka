@@ -1,0 +1,16 @@
+<!-- Trigger the Modal -->
+<img class="gallery-image" [attr.id]="imageId" src="/app/images/{{jobDetailId}}/{{index}}.jpg" alt="{{alt}}"
+width="250" height="180">
+
+<!-- The Modal -->
+<div  [attr.id]="modalId" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close" (click)="handleClose()">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content"  [attr.id]="modalImgId">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>

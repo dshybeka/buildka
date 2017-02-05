@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
+import { DOCUMENT } from '@angular/platform-browser';
 
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { JobDetails }  from './model/job-details';
+
+import { ModalImageComponent }  from './modal-image.component';
 
 const JOB_ID_TO_IMG_COUNTER : {} = {
   1: {id: 1, name: "",
@@ -52,13 +56,15 @@ const JOB_ID_TO_IMG_COUNTER : {} = {
     selector: 'app',
     templateUrl: 'app/templates/job-details.html'
 })
+@Injectable()
 export class JobDetailsComponent {
 
   jobDetail: JobDetails
   sub: any;
 
   constructor(private activatedRoute: ActivatedRoute,
-              private router: Router) {
+              private router: Router,
+              @Inject(DOCUMENT) private document: any) {
   }
 
   ngOnInit() {
@@ -66,9 +72,9 @@ export class JobDetailsComponent {
     this.sub = this.activatedRoute.params.subscribe(params => {
 
        let id = Number.parseInt(params['id']);
+       
        this.jobDetail = JOB_ID_TO_IMG_COUNTER[id];
     });
-
   }
 
   ngOnDestroy() {

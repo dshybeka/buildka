@@ -8,7 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 var core_1 = require('@angular/core');
+var core_2 = require('@angular/core');
+var platform_browser_1 = require('@angular/platform-browser');
 var router_1 = require('@angular/router');
 var JOB_ID_TO_IMG_COUNTER = {
     1: { id: 1, name: "",
@@ -48,9 +53,10 @@ var JOB_ID_TO_IMG_COUNTER = {
     },
 };
 var JobDetailsComponent = (function () {
-    function JobDetailsComponent(activatedRoute, router) {
+    function JobDetailsComponent(activatedRoute, router, document) {
         this.activatedRoute = activatedRoute;
         this.router = router;
+        this.document = document;
     }
     JobDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -66,8 +72,10 @@ var JobDetailsComponent = (function () {
         core_1.Component({
             selector: 'app',
             templateUrl: 'app/templates/job-details.html'
-        }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router])
+        }),
+        core_2.Injectable(),
+        __param(2, core_2.Inject(platform_browser_1.DOCUMENT)), 
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, Object])
     ], JobDetailsComponent);
     return JobDetailsComponent;
 }());

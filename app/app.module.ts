@@ -13,10 +13,11 @@ import { MainComponent }  from './main.component';
 import { ContactsComponent }  from './contacts.component';
 import { JobDetailsComponent }  from './job-details.component';
 import { HeaderComponent }  from './header.component';
+import { ModalImageComponent }  from './modal-image.component';
 
 @NgModule({
   imports: [ BrowserModule, ScrollSpyModule.forRoot(), routing, MainRoutingModule ],
-  declarations: [ AppComponent, ContactsComponent, MainComponent, JobDetailsComponent, HeaderComponent ],
+  declarations: [ AppComponent, ContactsComponent, MainComponent, JobDetailsComponent, HeaderComponent, ModalImageComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -18,13 +18,14 @@ var main_component_1 = require('./main.component');
 var contacts_component_1 = require('./contacts.component');
 var job_details_component_1 = require('./job-details.component');
 var header_component_1 = require('./header.component');
+var modal_image_component_1 = require('./modal-image.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, ng2_scrollspy_1.ScrollSpyModule.forRoot(), app_routes_1.routing, job_details_routes_1.MainRoutingModule],
-            declarations: [app_component_1.AppComponent, contacts_component_1.ContactsComponent, main_component_1.MainComponent, job_details_component_1.JobDetailsComponent, header_component_1.HeaderComponent],
+            declarations: [app_component_1.AppComponent, contacts_component_1.ContactsComponent, main_component_1.MainComponent, job_details_component_1.JobDetailsComponent, header_component_1.HeaderComponent, modal_image_component_1.ModalImageComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
