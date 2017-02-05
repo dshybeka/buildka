@@ -4,9 +4,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { JobDetails }  from './model/job-details';
 
-// import $ = require('jquery');
-// import { $ } from "jquery";
-
 const JOB_ID_TO_IMG_COUNTER : {} = {
   1: {id: 1, name: "",
       details: `<h2>Заборы</h2><p>У нас самые лучшие заборы, бла бла бла.</p>`,
@@ -72,13 +69,6 @@ export class JobDetailsComponent {
        this.jobDetail = JOB_ID_TO_IMG_COUNTER[id];
     });
 
-  }
-
-  handleImageClick(event: Event) {
-
-      console.log("called handleImageClick ", event);
-      event.preventDefault();
-      (<any>$('#pikapika')).ekkoLightbox();
   }
 
   ngOnDestroy() {
