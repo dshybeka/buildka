@@ -16,16 +16,9 @@ const jobDetailsRoutes: Routes = [
         path: ':id',
         component: JobDetailsComponent
       },
-
       {
         path: '',
-        redirectTo: '1',
-        pathMatch: 'full'
-      },
-      {
-        path: '**',
-        redirectTo: '1',
-        pathMatch: 'full'
+        component: JobDetailsComponent
       }
     ]
   },

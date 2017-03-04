@@ -72,8 +72,13 @@ export class JobDetailsComponent {
     this.sub = this.activatedRoute.params.subscribe(params => {
 
        let id = Number.parseInt(params['id']);
-       
-       this.jobDetail = JOB_ID_TO_IMG_COUNTER[id];
+       if (id === undefined || isNaN(id)) {
+
+         this.jobDetail = JOB_ID_TO_IMG_COUNTER[1];
+       } else {
+
+         this.jobDetail = JOB_ID_TO_IMG_COUNTER[id];
+       }
     });
   }
 
