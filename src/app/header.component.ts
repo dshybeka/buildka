@@ -4,7 +4,7 @@ import { ScrollSpyModule, ScrollSpyService } from 'ng2-scrollspy';
 
 @Component({
     selector: 'scrollable-header',
-    templateUrl: 'app/templates/header.html'
+    templateUrl: 'templates/header.html'
 })
 export class HeaderComponent implements AfterViewInit {
 

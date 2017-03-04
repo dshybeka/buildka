@@ -54,7 +54,7 @@ const JOB_ID_TO_IMG_COUNTER : {} = {
 
 @Component({
     selector: 'app',
-    templateUrl: 'app/templates/job-details.html'
+    templateUrl: 'templates/job-details.html'
 })
 @Injectable()
 export class JobDetailsComponent {

@@ -6,7 +6,7 @@ import { JobDetails }  from './model/job-details';
 
 @Component({
     selector: 'modal-image',
-    templateUrl: 'app/templates/modal-image.html'
+    templateUrl: 'templates/modal-image.html'
 })
 @Injectable()
 export class ModalImageComponent {
