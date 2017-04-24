@@ -42,7 +42,7 @@ export class HeaderComponent implements AfterViewInit {
           }
          
 
-        }, 8000)
+        }, 10000)
     }
 
   handleShow1() {
