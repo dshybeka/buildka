@@ -3,9 +3,13 @@
   width:auto;
 }
 
-body {
+/*.css-selector {
+  font-family: 'Asar', serif;
+}*/
 
-    background-color: rgba(240, 240, 240, 0.9);
+body {
+   font-family: 'Asar', serif; 
+   background-color: rgba(240, 240, 240, 0.9);
 }
 
 header {
@@ -13,6 +17,9 @@ header {
   color: white;
 }
 header small {
+    color: white;
+}
+.white {
     color: white;
 }
 
@@ -166,4 +173,89 @@ div.desc {
 }
 /*END: Modals*/
 
+.gallery .controls .btn.active {
+    color: rgba(255,255,255,.8);
+}
+
+.gallery .controls .btn {
+  display: inline-block;
+  margin: 0 .02em;
+  font-size: 3em;
+  text-align: center;
+  text-decoration: none;
+  transition: color .1s;
+
+  color: #ccc;
+  color: rgba(255, 255, 255, 0.4);
+  border: 0;
+  outline: none !important;
+}
+
+.gallery .controls .btn:hover {
+  color: white;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.gallery {
+  position: relative;
+}
+.gallery .item {
+  height: 560px;
+  overflow: hidden;
+  text-align: center;
+  background: #DDD;
+  font-family: "Raleway";
+}
+
+.gallery .item h1 {
+    color: white;
+}
+.gallery .item h1.invert {
+    color: #666;
+}
+
+.gallery .item {
+  /*position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;*/
+  /*opacity: 0;
+  transition: opacity .5s !important;*/
+}
+
+.gallery .controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.gallery .controls .btn {
+  display: inline-block;
+  margin: 0 .02em;
+  font-size: 3em;
+  text-align: center;
+  text-decoration: none;
+  transition: color .1s;
+}
+
+
+.gallery .background-image1 {
+    background: url('assets/hr/qual2.jpg') no-repeat;
+    background-size: cover;
+    background-position-y: 62%;
+}
+.gallery .background-image2 {
+    background: url('assets/hr/real2.jpg') no-repeat;
+    background-size: cover;
+}
+.gallery .background-image3 {
+    background: url("assets/hr/indiv3.jpg") no-repeat;
+    background-size: cover;
+}
+
+.gallery .note {
+        margin-top: 20%;
+}
 /*END: Galery*/
