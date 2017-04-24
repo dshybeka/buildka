@@ -3,4 +3,5 @@ export interface JobDetails {
   name: String;
   details: String;
   numberOfImages: Number;
+  imageDetails: Array<String>
 }
