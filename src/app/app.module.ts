@@ -15,8 +15,10 @@ import { JobDetailsComponent }  from './job-details.component';
 import { HeaderComponent }  from './header.component';
 import { ModalImageComponent }  from './modal-image.component';
 
+import { MaterializeModule } from 'angular2-materialize';
+
 @NgModule({
-  imports: [ BrowserModule, ScrollSpyModule.forRoot(), routing, MainRoutingModule ],
+  imports: [ BrowserModule, ScrollSpyModule.forRoot(), routing, MainRoutingModule, MaterializeModule ],
   declarations: [ AppComponent, ContactsComponent, MainComponent, JobDetailsComponent, HeaderComponent, ModalImageComponent ],
   bootstrap: [ AppComponent ]
 })

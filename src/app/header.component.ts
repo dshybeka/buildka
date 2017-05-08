@@ -1,6 +1,8 @@
-import { NgModule, Component, Injectable, AfterViewInit } from '@angular/core';
+import { NgModule, Component, Injectable, AfterViewInit, EventEmitter } from '@angular/core';
 
 import { ScrollSpyModule, ScrollSpyService } from 'ng2-scrollspy';
+
+import {MaterializeAction} from 'angular2-materialize';
 
 @Component({
     selector: 'scrollable-header',
@@ -19,10 +21,10 @@ export class HeaderComponent implements AfterViewInit {
   constructor(private scrollSpyService: ScrollSpyService) {}
 
   ngAfterViewInit() { 
-        this.scrollSpyService.getObservable('window').subscribe((e: any) => {
-            this.top = "100px";
+        // this.scrollSpyService.getObservable('window').subscribe((e: any) => {
+        //     this.top = "100px";
 
-        });
+        // });
 
         setInterval (() => {
          
@@ -35,39 +37,29 @@ export class HeaderComponent implements AfterViewInit {
             } else {
 
               if (this.counter == 3) {
-                console.log("show3");
                 this.handleShow3();
               }
             }
           }
          
 
-        }, 10000)
+        }, 100000)
     }
 
+  modalActions = new EventEmitter<string|MaterializeAction>();
   handleShow1() {
 
-      this.counter = 2;
-
-
-    this.show1 = true;
-    this.show2 = false;
-    this.show3 = false;
+    this.modalActions.emit({ action: 'carousel', params: ['set', 0] });
+    this.counter = 2;
   }
   handleShow2() {
 
+      this.modalActions.emit({ action: 'carousel', params: ['set', 1] });
       this.counter = 3;
-
-    this.show1 = false;
-    this.show2 = true;
-    this.show3 = false;
   }
   handleShow3() {
 
+      this.modalActions.emit({ action: 'carousel', params: ['set', 2] });
       this.counter = 1;
-
-    this.show1 = false;
-    this.show2 = false;
-    this.show3 = true;
   }
 }

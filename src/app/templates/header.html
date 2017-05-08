@@ -1,54 +1,38 @@
-<div class="gallery items-3">
-  
-  <figure *ngIf="show1" class="item background-image1">
-    <div class="col-xs-6">
-      <h1>Качество</h1>
+<div materialize="carousel" [materializeActions]="modalActions" [materializeParams]="[{full_width: true, duration: 100}]" class="gallery carousel carousel-slider center" data-indicators="true">
+    <div class="carousel-fixed-item center">
     </div>
-    <div class="col-xs-6 note white">
-      <h3>Многолетний опыт и полная самоотдача</h3>
+    <div class="carousel-item background-image1 white-text row">
+        <div class="col s6">
+          <h3>Качество</h3>
+        </div>
+        <div class="col s6 note">
+          <h5>Многолетний опыт и полная самоотдача</h5>
+        </div>
     </div>
-  </figure>
-
-  <figure *ngIf="show2" class="item background-image2">
-    <div class="col-xs-6">
-      <h1 >Надежность</h1>
+    <div class="carousel-item background-image2 white-text row">
+        <div class="col s6">
+          <h3 >Надежность</h3>
+        </div>
+        <div class="col s6 note">
+          <h5>Завершить работу в срок и с надлежащим качеством - наш главный приоритет</h5>
+        </div>
     </div>
-    <div class="col-xs-6 note white">
-      <h3>Завершить работу в срок и с надлежащим качеством - наш главный приоритет</h3>
+    <div class="carousel-item background-image3 white-text row">
+          <div class="col s6">
+            <h3>Индивидуальный подход</h3>
+          </div>
+          <div class="col s6 note">
+            <h5>Мы подскажем как лучше реализовать ваши желания и поможем составить план работ</h5>
+          </div>
     </div>
-  </figure>
-
-  <figure *ngIf="show3" class="item background-image3" >
-    <div class="col-xs-6">
-      <h1>Индивидуальный подход</h1>
-    </div>
-    <div class="col-xs-6 note white">
-      <h3>Мы подскажем как лучше реализовать ваши желания и поможем составить план работ</h3>
-    </div>
-  </figure>
-
-  <div class="controls">
-    <button (click)="handleShow1()" class="btn btn-link" [ngClass]="{'active': show1 }" >•</button>
-    <button (click)="handleShow2()" class="btn btn-link " [ngClass]="{'active': show2 }">•</button>
-    <button (click)="handleShow3()" class="btn btn-link" [ngClass]="{'active': show3 }">•</button>
-  </div>
 </div>
 
-<div id="nav" scrollSpy>
-  <div class="navbar navbar-default navbar-static">
-    
-    <div class="container">
-      
-      <div class="navbar-collapse collapse">
-        
-        <ul class="nav navbar-nav">
-          <li routerLinkActive="active" ><a routerLink="/main">Главная</a></li>
+<nav>
+  <div class="nav-wrapper indigo lighten-5">
+    <a href="/main" class="brand-logo right fav"></a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li routerLinkActive="active" ><a routerLink="/main">Главная</a></li>
           <li routerLinkActive="active"><a routerLink="/contacts">Контакты</a></li>
-        </ul>
-
-      </div>    
-    </div>
-
+    </ul>
   </div>
-
-</div>
+</nav>

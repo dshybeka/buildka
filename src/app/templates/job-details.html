@@ -2,17 +2,15 @@
 
     <div [innerHTML]="jobDetail.details"> </div>
 
-    <div class="images-holder">
 
-      <div class="img " *ngFor="let imageDetail of jobDetail.imageDetails; let i=index">
+
+      <div *ngFor="let imageDetail of jobDetail.imageDetails; let i=index">
 
         <modal-image [jobDetailId]='jobDetail.id' [index]='i+1' [alt]='imageDetail' ></modal-image>
 
-        <div class="desc">{{imageDetail}}</div>
+        
       </div>
 
-    </div>
-
-
+  
     
 </article>
