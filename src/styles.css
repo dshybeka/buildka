@@ -233,8 +233,36 @@ div.desc {
     background-size: cover;
 }
 
+scrollable-header .info {
+  position: absolute;
+  top: 3%;
+  right: 0;
+  height: 100px;
+  z-index: 1;
+  color: white;
+  margin-right: 40px;
+}
+scrollable-header .info > p {
+  font-size: 1.2em;
+}
+
+scrollable-header .marketing {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  z-index: 1;
+  color: aliceblue;
+  margin-bottom: 90px;
+  margin-left: 10px;
+}
+
+.gallery .head-text {
+  margin-top: 10%;
+}
+
 .gallery .note {
-        margin-top: 20%;
+  margin-top: 30%;
 }
 
 /* Images */
