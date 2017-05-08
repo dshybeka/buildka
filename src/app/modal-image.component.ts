@@ -1,8 +1,9 @@
-import { Component, Input } from '@angular/core';
-import { Inject, Injectable } from '@angular/core';
+import { Component, Input, EventEmitter, Inject, Injectable } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
 import { JobDetails }  from './model/job-details';
+
+import {MaterializeAction} from 'angular2-materialize';
 
 @Component({
     selector: 'modal-image',
@@ -31,31 +32,42 @@ export class ModalImageComponent {
 
   ngAfterViewChecked() {
 
-          // Get the modal
-      var modal = document.getElementById(this.modalId);
+      // var modal = document.getElementById(this.modalId);
 
-      // Get the image and insert it inside the modal - use its "alt" text as a caption
-      var img = document.getElementById(this.imageId);
+      // var img = document.getElementById(this.imageId);
 
-      var modalImg: HTMLImageElement = <HTMLImageElement>document.getElementById(this.modalImgId);
-      var captionText = document.getElementById("caption");
-      img.onclick = function(){
-          modal.style.display = "block";
-          modalImg.src = (<HTMLImageElement>this).src;
-          captionText.innerHTML = (<HTMLImageElement>this).alt;
-      }
+      // if (img != null &&  modal != undefined) {
 
-      // Get the <span> element that closes the modal
-      // var span = <HTMLElement>document.getElementsByClassName("close")[0];
+      //   var modalImg: HTMLImageElement = <HTMLImageElement>document.getElementById(this.modalImgId);
+      //   var captionText = document.getElementById("caption");
+      //   img.onclick = function(){
+      //       modal.style.display = "block";
+      //       modalImg.src = (<HTMLImageElement>this).src;
+      //       captionText.innerHTML = (<HTMLImageElement>this).alt;
+      //   }
 
-      // When the user clicks on <span> (x), close the modal
-      modal.onclick = function() { 
-          modal.style.display = "none";
-      }
+      //   modal.onclick = function() { 
+      //       modal.style.display = "none";
+      //   }
+      // }
+     
   }
 
-  handleClose() {
+  modalActions = new EventEmitter<string|MaterializeAction>();
+  openModal() {
 
-    document.getElementById(this.modalId).style.display='none'
+    this.modalActions.emit({action:"modal",params:['open']});
   }
+  closeModal() {
+
+    if (this.modalActions != undefined) {
+      
+      this.modalActions.emit({action:"modal",params:['close']});
+    }
+  }
+  clearClose(smth) {
+
+    smth[0].style.zIndex = "-30000";
+  }
+  
 }
