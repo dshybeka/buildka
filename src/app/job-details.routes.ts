@@ -9,7 +9,7 @@ const jobDetailsRoutes: Routes = [
   
   {
 
-    path: 'main',
+    path: 'samples',
     component: MainComponent,
     children: [
       {

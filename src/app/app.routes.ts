@@ -3,11 +3,13 @@ import { Routes, RouterModule } from "@angular/router";
 import { MainComponent }  from './main.component';
 import { ContactsComponent }  from './contacts.component';
 
+import { AboutComponent }  from './about.component';
+
 const routes: Routes = [
   
   {
     path: 'main',
-    component: MainComponent
+    component: AboutComponent
   },
 
   {
@@ -16,14 +18,19 @@ const routes: Routes = [
   },
 
   {
+    path: 'samples',
+    component: MainComponent
+  },
+
+  {
     path: '',
-    redirectTo: '/main',
+    redirectTo: '/samples',
     pathMatch: 'full'
   },
 
   { 
     path: '**',
-    redirectTo: '/main',
+    redirectTo: '/samples',
     pathMatch: 'full'
   }
 ]

@@ -11,6 +11,7 @@ import { AppComponent }  from './app.component';
 
 import { MainComponent }  from './main.component';
 import { ContactsComponent }  from './contacts.component';
+import { AboutComponent }  from './about.component';
 import { JobDetailsComponent }  from './job-details.component';
 import { HeaderComponent }  from './header.component';
 import { ModalImageComponent }  from './modal-image.component';
@@ -19,7 +20,7 @@ import { MaterializeModule } from 'angular2-materialize';
 
 @NgModule({
   imports: [ BrowserModule, ScrollSpyModule.forRoot(), routing, MainRoutingModule, MaterializeModule ],
-  declarations: [ AppComponent, ContactsComponent, MainComponent, JobDetailsComponent, HeaderComponent, ModalImageComponent ],
+  declarations: [ AppComponent, ContactsComponent, AboutComponent, MainComponent, JobDetailsComponent, HeaderComponent, ModalImageComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
