@@ -1,31 +1,8 @@
-<!-- <img class="gallery-image" [attr.id]="imageId" src="/assets/{{jobDetailId}}/{{index}}.jpg" alt="{{alt}}"
-width="250" height="180">
-
-<div  [attr.id]="modalId" class="modal">
-
-  <span class="close" (click)="handleClose()">&times;</span>
-
-  <img class="modal-content"  [attr.id]="modalImgId">
-
-  <div id="caption"></div>
-</div>
- -->
-
-<!-- <div  [attr.id]="modalId" class="modal">
-
-  <span class="close" (click)="handleClose()">&times;</span>
-
-  <img class="modal-content"  src="/assets/{{jobDetailId}}/{{index}}.jpg">
-
-  <div id="caption"></div>
-</div> -->
-
- 
 <div class="col s12 m4 gallery-image" (click)="openModal()">
   <div class="card">
 
     <div class="card-image">
-      <img class="gallery-image" [attr.id]="imageId" src="/assets/{{jobDetailId}}/{{index}}.jpg" alt="{{alt}}">
+      <img class="gallery-image" [attr.id]="imageId" src="/assets/preview/{{jobDetailId}}/{{index}}.jpg" alt="{{alt}}">
     </div>
 
     <div class="card-content">
