@@ -594,6 +594,18 @@ scrollable-header .marketing {
 
 /* About */
 #about {
-  font-size: 1.08em;
+  margin: auto 25px;
+}
+
+#about p {
+  font-size: 1.2em;
+}
+
+#about article {
+  padding-top: 10px;
+}
+
+#about article:last-of-type {
+  margin-bottom: 40px;
 }
 /* END: About */
