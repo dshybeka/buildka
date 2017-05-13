@@ -4,7 +4,7 @@
 }
 
 body {
-   font-family: 'Raleway', serif;
+   /*font-family: 'Raleway', serif;*/
    font-size: 1em;
    background-color: rgba(240, 240, 240, 0.9);
    color: #0A1C3D;
@@ -14,7 +14,7 @@ body {
   color: #0A1C3D;
 }
 .nav-wrapper li a {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .row .collection .collection-item {
@@ -185,7 +185,6 @@ div.desc {
     cursor: pointer;
 }
 
-*/
 .gallery {
   position: relative;
 }
@@ -194,8 +193,9 @@ div.desc {
   overflow: hidden;
   text-align: center;
   background: #DDD;
-  font-family: "Raleway";
+  font-style: italic;
 }
+
 .gallery h1 {
     color: white;
 }
