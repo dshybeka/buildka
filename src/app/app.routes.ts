@@ -24,13 +24,13 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: '/samples',
+    redirectTo: '/main',
     pathMatch: 'full'
   },
 
   { 
     path: '**',
-    redirectTo: '/samples',
+    redirectTo: '/main',
     pathMatch: 'full'
   }
 ]
