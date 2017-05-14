@@ -609,3 +609,21 @@ scrollable-header .marketing {
   margin-bottom: 40px;
 }
 /* END: About */
+
+/* Contacts*/
+#contacts {
+  padding-top: 30px;
+  font-size: 1.4em;
+}
+
+@media all and (max-width: 699px) {
+   #contacts {
+      padding-top: 5px;
+      font-size: 1em;
+    }
+}
+
+#contacts i {
+  vertical-align: middle;
+}
+/* END: Contacts; */
