@@ -124,7 +124,7 @@ div.desc {
 /*}*/
 .modal {
   overflow: hidden !important;
-  display: inline-block !important; 
+  /*display: inline-block !important; */
   /*width: 95% !important ; height: 95% !important */
   left: 50%;
   -webkit-transform: translateX(-50%) !important;
@@ -248,12 +248,12 @@ scrollable-header .info > p {
 
 scrollable-header .marketing {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   height: 100px;
   z-index: 1;
   color: aliceblue;
-  margin-bottom: 90px;
+  margin-top: 424px;
   margin-left: 10px;
 }
 
@@ -262,7 +262,7 @@ scrollable-header .marketing {
 }
 
 .gallery .note {
-  margin-top: 30%;
+  margin-top: 348px;
 }
 
 /* Images */
